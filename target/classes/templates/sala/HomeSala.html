@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROLE ESCOLAR</title>
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/allPageList.css">
+</head>
+<body>
+    <header>
+        <div class="container_logo">
+            <img src="../img/school logo_6851480.png">
+            <a href="/"><h2>ALBERTO MEDEIROS</h2></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home-aluno">ALUNO</a></li>
+                <li><a href="/home-professor">PROFESSOR</a></li>
+                <li><a href="/home-sala">SALA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="group_items">
+            <h1>SALAS</h1>
+            
+            <span class="msg-sucess" th:text="${MsgSucess}" th:if="${MsgSucess} != null"></span>
+            <a class="btns" href="/cadastrar-sala">NOVA SALA</a>       
+        </div>
+        <div class="group_items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sala</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="sala : ${ListaSala}">
+                        <td th:text="${sala.nomeSala}"></td>
+                        <td><a th:href="|/alterar-sala?id=${sala.id}|">EDITAR <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="20" height="20"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none" stroke-width="1"></path><g fill="#000000" stroke="none" stroke-width="1"><path d="M131.27317,15.16198c-3.56864,0.14529 -6.96304,1.58185 -9.55182,4.04245l-51.26407,51.25286c-0.79284,0.80439 -1.33043,1.82504 -1.54531,2.93386l-5.73333,28.66667c-0.39587,1.88863 0.18488,3.84971 1.54531,5.21823c1.08419,1.07256 2.55102,1.66896 4.07604,1.65729h1.14219l28.66667,-5.73333c1.10881,-0.21488 2.12946,-0.75247 2.93386,-1.54531l51.25286,-51.26406c5.57946,-5.61287 5.57946,-14.67775 0,-20.29062v-0.11198l-10.7836,-10.78359c-2.88633,-2.74317 -6.76003,-4.20137 -10.7388,-4.04245zM131.82188,26.48307c0.77393,-0.01357 1.5178,0.29943 2.04921,0.86224l10.7836,10.78359c0.55284,0.52008 0.86632,1.2454 0.86632,2.00443c0,0.75902 -0.31349,1.48434 -0.86632,2.00443l-7.05469,7.11068l-14.84844,-14.84844l7.11068,-7.05469c0.51006,-0.54013 1.21682,-0.85111 1.95964,-0.86224zM37.26667,28.66667c-11.08251,0 -20.06667,8.98415 -20.06667,20.06667v86c0,11.08251 8.98415,20.06667 20.06667,20.06667h86c11.08251,0 20.06667,-8.98415 20.06667,-20.06667v-37.26667c0,-3.16643 -2.5669,-5.73333 -5.73333,-5.73333c-3.16643,0 -5.73333,2.5669 -5.73333,5.73333v37.26667c0,4.74965 -3.85035,8.6 -8.6,8.6h-86c-4.74965,0 -8.6,-3.85035 -8.6,-8.6v-86c0,-4.74965 3.85035,-8.6 8.6,-8.6h37.26667c3.16643,0 5.73333,-2.5669 5.73333,-5.73333c0,-3.16643 -2.5669,-5.73333 -5.73333,-5.73333zM114.66667,42.4849l14.84844,14.84844l-34.85911,34.85911l-18.57735,3.72891l3.72891,-18.57735z"></path></g><g fill="#cccccc" stroke="none" stroke-width="1"><path d="M93.975,75.69v2.24h-6.63v18.38h-2.7v-18.38h-6.62v-2.24z"></path></g><path d="M68.025,106.31v-40.62h35.95v40.62z" fill="#ff0000" stroke="#50e3c2" stroke-width="3" opacity="0"></path></g></svg></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

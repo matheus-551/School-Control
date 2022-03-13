@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.img_home {
+    max-width: 582px;
+    max-height: 562px;
+}
+
+.group_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.group_items h1 {
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.group_buttom {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btns {
+    width: 250px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 2%;
+    color: #fff;
+    background: #474044;
+}

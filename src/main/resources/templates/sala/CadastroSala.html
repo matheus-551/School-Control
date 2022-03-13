@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROLE ESCOLAR</title>
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+</head>
+<body>
+    <header>
+        <div class="container_logo">
+            <img src="../img/school logo_6851480.png">
+            <a href="/"><h2>ALBERTO MEDEIROS</h2></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home-aluno">ALUNO</a></li>
+                <li><a href="/home-professor">PROFESSOR</a></li>
+                <li><a href="/home-sala">SALA</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <form action="/salvar-sala" method="post" th:object="${salaObj}">
+        <div class="container-form">
+            <div class="head-form">
+                <h1> CADASTRO DE SALA</h1>
+                <span class="msg-error" th:text="${MsgError}" th:if="${MsgError != null}"></span>
+            </div>
+            
+            <hr>
+
+            <input type="hidden" th:field="*{id}">
+
+            <label for="">Nome da sala: </label> 
+            <input type="text" th:field="*{nomeSala}">
+
+            <button type="submit" class="btn-save">SALVAR</button>
+        </div>
+    </form>
+</body>
+</html>

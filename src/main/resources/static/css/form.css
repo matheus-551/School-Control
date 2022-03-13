@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container-form {
+    padding: 16px;
+    background: #fff;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, select:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-save {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    border: none;
+    opacity: 0.9;
+    color: #ffffff;
+    background-color: #04AA6D;
+}
+
+.btn-save:hover {
+    opacity: 1;
+}
+
+.head-form {
+    padding: 2px;
+    display: flex;
+}
+
+.msg-error {
+    padding: 10px;
+    margin-left: 16px;
+    border-left: 6px solid #f44336;
+    background-color: #ffdddd;
+}
