@@ -1,1 +1,2 @@
-# School-Control
+<h1>SCHOOL CONTROL</h1>
+
