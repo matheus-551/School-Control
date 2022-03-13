@@ -37,7 +37,7 @@
             <label for="">Nome do aluno</label>
             <input type="text" th:field="*{nomeAluno}">
 
-            <select th:field="*{professor}">
+            <select th:field="*{professorAluno}">
                 <option value=0></option>
                 <option th:each="professor : ${ListaProfessor}" th:text="${professor.nomeProfessor}" th:value="${professor.id}"></option>
             </select>

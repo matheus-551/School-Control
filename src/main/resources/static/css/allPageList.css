@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -54,4 +57,10 @@ table th {
     padding: 10px;
     background-color: #ddffdd;
     border-left: 6px solid #04AA6D;
+}
+
+@media screen and (max-width: 435px) {
+    .btns{
+        width: 50%;
+    }
 }

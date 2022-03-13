@@ -24,5 +24,5 @@ public class Aluno {
 	@Column(name = "nome_aluno", length = 150, nullable = false)
 	private String nomeAluno;
 	@ManyToOne
-	private Professor professor;
+	private Professor professorAluno;
 }

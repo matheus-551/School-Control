@@ -26,7 +26,8 @@ public class ProfessorController {
 
     @GetMapping("/home-professor")
     public String ListaProfessor(Model model){
-        List<Professor> professores = this.professorService.ListarTodosProfessores();
+        List<Professor> professores = this.professorService.ListarTodosProfessores();                   
+
         model.addAttribute("ListaProfessor", professores);
         return"professor/HomeProfessor";
     }
