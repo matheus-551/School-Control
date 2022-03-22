@@ -22,6 +22,8 @@
 
 ## Como executar a aplicação
 
+Tutorial em vídeo: https://youtu.be/c-rrzxxMezU
+
 ### Importando o projeto 
 
 Após clonar o repositório acesse a pasta do projeto clonado
